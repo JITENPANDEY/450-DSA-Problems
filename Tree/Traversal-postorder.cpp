@@ -31,32 +31,29 @@ void withoutRecur1(TreeNode* root, vector<int>&ans){
 }
 
 //using one stack
-void morrisInorder(TreeNode* root, vector<int>&ans){
+void withoutRecur2(TreeNode* root, vector<int>&ans){
+    stack<TreeNode*>s;
     TreeNode* curr=root;
-    while(curr!=NULL){
-        
-        //if curr->left is null the print and go to right
-        if(curr->left==NULL){
-            ans.push_back(curr->val);
-            curr = curr->right;
-        }else{
-            //go to the rightmost node of the left subtree
-            TreeNode* temp=curr->left;
-            while(temp->right && temp->right!=curr){
-                temp=temp->right;
-            }
-            // and make the thread when temp->right is NULL
-            if(temp->right==NULL){
-                temp->right = curr;
-                ans.push_back(curr->val);
-                curr=curr->left;
-            }else{
-                temp->right = NULL;
-                curr = curr->right;
-            }
-            
+    TreeNode* prev=NULL;
+    while( !s.empty()  or curr!=NULL){
+        //if root is not NULL-> push it and go to left
+        if(curr!=NULL){
+            s.push(curr);
+            curr=curr->left;
         }
-        
-    }
+        //if root is NULL->means left is NULL->
+        //and check if prev is right child of top element
+        else{
+            curr = s.top();
+            if(curr->right==NULL or curr->right==prev){
+                s.pop();
+                ans.push_back(curr->val);
+                prev=curr;
+                curr=NULL;
+            }
+            else
+                curr=curr->right; 
 
+        }
+    }
 }
