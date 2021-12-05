@@ -1,10 +1,10 @@
 #include<bits/stdc++.h>
 using namespace std;
 //Function to find largest rectangular area possible in a given histogram.
-vector<long long> NSERightIndex(long long arr[], int n){
+vector<int> NSERightIndex(int arr[], int n){
 // Your code here
-vector<long long> ans(n);
-stack<long long> s;
+vector<int> ans(n);
+stack<int> s;
 s.push(n-1);
 ans[n-1]=n;
 for(int i=n-2;i>=0;i--){
@@ -21,10 +21,10 @@ for(int i=n-2;i>=0;i--){
 }
 return ans;
 }
-vector<long long> NSELeftIndex(long long arr[], int n){
+vector<int> NSELeftIndex(int arr[], int n){
 // Your code here
-vector<long long> ans(n);
-stack<long long> s;
+vector<int> ans(n);
+stack<int> s;
 s.push(0);
 ans[0]=-1;
 for(int i=1;i<n;i++){
@@ -41,13 +41,13 @@ for(int i=1;i<n;i++){
 }
 return ans;
   }
-long long getMaxArea(long long arr[], int n)
+int getMaxArea(int arr[], int n)
 {
   // Your code here
-  vector<long long> NSE_Left= NSELeftIndex(arr, n);
-  vector<long long> NSE_Right = NSERightIndex(arr, n);
+  vector<int> NSE_Left= NSELeftIndex(arr, n);
+  vector<int> NSE_Right = NSERightIndex(arr, n);
   
-  long long ans = -1;
+  int ans = -1;
   for(int i=0;i<n;i++){
       ans = max(ans, (NSE_Right[i]- NSE_Left[i]-1)*arr[i]);
   }
@@ -56,4 +56,41 @@ long long getMaxArea(long long arr[], int n)
 int main(){
   
 }
+
+
+
+//
+int n = heights.length; 
+Stack<Integer> st = new Stack<>();
+int leftSmall[] = new int[n]; 
+int rightSmall[] = new int[n]; 
+for(int i = 0;i<n;i++) {
+    while(!st.isEmpty() && heights[st.peek()] >= heights[i]) {
+        st.pop(); 
+    }
+    
+    if(st.isEmpty()) leftSmall[i] = 0; 
+    else leftSmall[i] = st.peek() + 1; 
+    st.push(i); 
+}
+
+// clear the stack to be re-used
+while(!st.isEmpty()) st.pop(); 
+
+for(int i = n-1;i>=0;i--) {
+    while(!st.isEmpty() && heights[st.peek()] >= heights[i]) {
+        st.pop(); 
+    }
+    
+    if(st.isEmpty()) rightSmall[i] = n-1; 
+    else rightSmall[i] = st.peek() - 1;
+    
+    st.push(i); 
+}
+
+int maxA = 0; 
+for(int i = 0;i<n;i++) {
+    maxA = Math.max(maxA, heights[i] * (rightSmall[i] - leftSmall[i] + 1));
+}
+return maxA; 
   

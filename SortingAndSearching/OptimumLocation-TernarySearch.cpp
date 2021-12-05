@@ -48,3 +48,7 @@ int main(){
     cout<< findOptimumCost(p,l);
   
 }
+
+/* APPROACH
+link : https://www.codingninjas.com/codestudio/problem-details/optimum-location_1116097
+/*

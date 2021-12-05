@@ -47,7 +47,7 @@ void withoutRecur(TreeNode* root, vector<int>&ans){
                 if(temp->right==NULL){
                     temp->right = curr;
                     curr=curr->left;
-                }else{
+                }else{ // rightmost node -> right == curr then destry the thread;
                     temp->right = NULL;
                     ans.push_back(curr->val);
                     curr = curr->right;

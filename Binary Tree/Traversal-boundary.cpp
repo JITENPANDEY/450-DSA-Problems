@@ -40,6 +40,8 @@ void printLeaves(Node *root, vector<int> &ans){
             ans.push_back(root->data);
             printLeftBoundary(root->right, ans);
         }
+
+        // here we skip the last leaf not
             
     }
     vector <int> boundary(Node *root)

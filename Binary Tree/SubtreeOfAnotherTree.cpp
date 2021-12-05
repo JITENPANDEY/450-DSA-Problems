@@ -21,4 +21,4 @@
     //we will compare both the trees
     //if bot trees are not equal then there is a posibility that the subtree will be same either left subtree              or rightsubtree
 
-    //         else the main tree doesnot sontyain the subtree
+    //         else the main tree doesnot contyain the subtree

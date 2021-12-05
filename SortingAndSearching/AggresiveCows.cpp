@@ -2,14 +2,15 @@
 using namespace std;
 bool canBePlaced(int position[], int n , int cows, int mid){
   int lastPlaced = position[0];
-  int count=1;
+  int cowsPlaced=1;
   for(int i=1;i<n;i++){
     if(position[i]-lastPlaced >= mid){
-      count++;
-      lastPlaced = position[i];
+        cowsPlaced++;
+        if(count==cows)
+            return true;
+        lastPlaced = position[i];
     }
-    if(count==cows)
-    return true;
+
   }
   return false;
 }

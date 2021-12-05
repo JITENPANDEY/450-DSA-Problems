@@ -1,19 +1,14 @@
 bool isPossible(int A[], int N, int mid, int M){
-    int requiredStudent = 1;
+    int student = 1;
     int currSum = 0;
     for(int i=0;i<N;i++){
-        if(A[i]>mid)
-            return false;
-        if(A[i]+currSum>mid){
-            requiredStudent++;
+        currSum += A[i];
+        if(currSum>mid){
+            student++;
             currSum = A[i];
-        }else{
-            currSum+=A[i];
         }
     }
-    if(requiredStudent>M)
-        return false;
-    return true;
+    return student<=M;
 }
 int findPages(int A[], int N, int M) 
 {
@@ -36,3 +31,6 @@ int findPages(int A[], int N, int M)
     }
     return ans;
 }
+
+//similar problem 
+Leetcode : 410. Split Array Largest Sum

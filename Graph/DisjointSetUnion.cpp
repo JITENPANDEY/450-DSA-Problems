@@ -12,23 +12,23 @@ void makeSet(){
     }
 }
 int find(int x){
-    if(parent[x]==x)
+    if(parent[x]==x) 
         return x;
     int temp = find(parent[x]);
     parent[x]=temp;
     return temp;
 }
 void unionn(int x, int y){
-    int parentX = find(x);
-    int parentY = find(y);
+    int LX = find(x);
+    int LY = find(y);
     
-    if(rankk[x]>rankk[y])
-        parent[y]=x;
-    else if(rankk[x]<rankk[y])
-        parent[x]=y;
+    if(rankk[LX]>rankk[LY])
+        parent[LY]=LX;
+    else if(rankk[LX]<rankk[LY])
+        parent[LX]=LY;
     else{
-        parent[y]=x;
-        rankk[x]++;
+        parent[LY]=LX;
+        rankk[LX]++;
     }
         
 }

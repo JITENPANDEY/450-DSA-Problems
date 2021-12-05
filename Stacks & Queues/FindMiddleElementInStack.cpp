@@ -24,6 +24,7 @@ class MyStack{
       this->mid = dummy;
       this->count=0;
     }
+    //push
     void push(int x){
       DoublyListNode  *newNode = new DoublyListNode(x);
       newNode->prev = NULL;
@@ -39,6 +40,7 @@ class MyStack{
       else if(count%2==0)
           mid = mid->prev;
     }
+    //pop
     int pop(){
       if(count==0){
         cout<<"stack is empty";
@@ -56,6 +58,7 @@ class MyStack{
       return x;
 
     }
+    //find middle
     int findMiddle(){
       if(count==0){
         cout<<"stack is empty";
@@ -63,6 +66,7 @@ class MyStack{
       }
       return mid->val;
     }
+    // delete middle
     int deletemiddle(){
       int x = mid->val;
       mid->prev->next= mid->next;

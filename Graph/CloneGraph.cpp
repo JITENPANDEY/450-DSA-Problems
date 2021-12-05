@@ -1,7 +1,7 @@
 unordered_map<Node*, Node*> map;
     Node* cloneGraph(Node* node) {
         
-//DFS - APPROACH
+//BFS - APPROACH
 //         if(node==NULL) return NULL;
 //         unordered_map<Node*, Node*> map;
 //         queue<Node*> q;
@@ -22,7 +22,7 @@ unordered_map<Node*, Node*> map;
 //         }
 //         return map[node];
         
-//BFS - APPROACH
+//DFS - APPROACH
         if(node==NULL) return NULL;
         if(!map[node]){
             map[node] = new Node(node->val);

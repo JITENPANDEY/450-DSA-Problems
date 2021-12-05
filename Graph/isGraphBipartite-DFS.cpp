@@ -2,6 +2,9 @@
 using namespace std;
 #define ll long long int
 #define pb push_back
+/*
+A graph is bipartite if the nodes can be partitioned into two independent sets A and B such that every edge in the graph connects a node in set A and a node in set B.
+*/
 bool isGraphBipartite(int i, vector<int>adj[], vector<int> &color, int c)
     {
         color[i] = c;

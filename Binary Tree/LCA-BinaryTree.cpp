@@ -1,4 +1,4 @@
-//1. if root is null or my curr node is either p or q then return root.
+ //1. if root is null or my curr node is either p or q then return root.
     //2. go to the left and find for p or q
     //3. go to left find for p and q
     //4. if at any current node get both p and q then that node will be the LCA
