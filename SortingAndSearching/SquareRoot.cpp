@@ -1,23 +1,19 @@
 #include<bits/stdc++.h>
 using namespace std;
-int sqrt(int n){
-  int low =0, high=n;
-  int ans=0;
-  while(low<=high){
+double sqrt(int n){
+  double low =0, high=n;
+  double ans=0;
+  while((high-low) > 1e-6){
 
-    int mid = (low+high)/2;
+    double mid = (low+high)/2.0;
     if(mid*mid>n)
-      high=mid-1;
-    else if(mid*mid<n){
-        ans = mid;
-        low= mid+1;
+        high=mid;
+    else{
+        low= mid;
     }
-    else
-        return mid;
   }
-  return ans;
+  return low;
 }
 int main(){
-  cout<<sqrt(1);
+  cout<<sqrt(120);
 }
-

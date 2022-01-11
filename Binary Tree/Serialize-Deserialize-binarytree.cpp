@@ -13,8 +13,7 @@
                 ans+=to_string(node->val)+",";
                 q.push(node->left);
                 q.push(node->right);
-            } 
-                
+            }        
         }
         //cout<<ans;
         return ans;

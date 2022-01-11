@@ -34,7 +34,7 @@ int main() {
 	int n,e;
 	cin>>n>>e;
 	int a,b;
-  vector<bool> DFSvisited(n, false);
+    vector<bool> DFSvisited(n, false);
 	vector<int> g[n];
 	
 	for(int i=0;i<e;i++)

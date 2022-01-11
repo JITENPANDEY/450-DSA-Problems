@@ -7,7 +7,7 @@ vector<long long> nextGreaterElement(vector<long long> &arr, int n){
   s.push(arr[n-1]);
   ans[n-1]=-1;
   for(int i=n-2;i>=0;i--){
-      // pop untill greater element found on top of stack
+      // pop untill smaller element found on top of stack
       while(!s.empty() && arr[i]>s.top())
           s.pop();
       

@@ -12,11 +12,11 @@ void primsAlgorithm(vector<pair<ll,ll>> g[], int n){
     ll totalCost = 0;
     priority_queue<vector<ll>, vector<vector<ll>>, comp> pq;
     vector<bool>visited(n, false);
-    pq.push({-1, 0, 0});
+    pq.push({-1, 0, 0});  //{acuring vetex, current vetex, weight}
     while(!pq.empty()){
         auto rem = pq.top();
-        pq.pop();a
-        if(visited[rem[1]])
+        pq.pop();
+        if(visited[rem[1]]) 
         continue;
         
         visited[rem[1]]=true;

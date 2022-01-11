@@ -1,6 +1,10 @@
 #include<bits/stdc++.h>
 using namespace std;
-
+/*
+0 representing an empty cell,
+1 representing a fresh orange, or
+2 representing a rotten orange.
+*/
 int orangesRotting(vector<vector<int>>& grid) {
   // Code here
   queue<pair<int, int>>q;

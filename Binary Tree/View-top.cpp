@@ -1,7 +1,7 @@
 vector<int>ans;
         map<int,int> mp;
         queue<pair<int,Node*>> q;
-        q.push({0,root});
+        q.push({0,root}); //{horizintal distance , node}
         while(!q.empty()){
             int x = q.front().first;
             Node* it = q.front().second;

@@ -30,3 +30,31 @@ More similar binary search problems:
 1482. Minimum Number of Days to Make m Bouquets
 1539. Kth Missing Positive Number
 
+
+
+//Intro
+Good afternoon Sir/ma'am,
+My name is jiten Pandey. I am from Dhanbad Jharkhand. I am currently working as a software engineer
+at hashedin by deloitte. I have completed my B.Tech in IT from netaji subhash engineering college 
+kolkata in this year. My overall CGPA is 8.98. 
+
+Before hashedin I also worked as an Intern at Deltax.
+At Hashedin I am currently working on APIs involving Java Vertx, for a Major American Bank with my backend team.
+
+Apart from my professional work I have keen interest in problem solving,  I love to spend time to find solutions of problems on leetcode.
+
+Coming to my projects I have developed several projects such as A blue collar job application which is mainly implemented forblue collar job seekers such as sweeper, peon security guard etc, next is a URL shortner which is mainly useful for shortening the long urls, Here I have used murmur3_32 bit hashing function for encyption,apart from that I have also developed a File sharing application and an exam portal.
+
+That is from my side. Thank you.
+
+Hi Mona, 
+I came across your LinkedIn post about SDE hiring in your team.  After going through the Job description, I found a good match for my skills against the role and requirements. It would be really helpful if You can consider my candidature for this role.
+Please find my attached resume for your reference and let me know if you need more information on my profile.
+
+Thanks and Regards
+Jiten Pandey
+
+
+
+
+Referral Request for SDE-1 at Amazon | Jiten Pandey

@@ -14,12 +14,12 @@ int isNegativeWeightCycle(int n, vector<vector<int>>edges){
 	            continue;
 	           if(dist[edge[0]]+edge[2]<dist[edge[1]])
 	            dist[edge[1]] = dist[edge[0]]+edge[2];
-	           
 	       }
 	    }
 	    for(auto i : dist)
 	    cout<<i<<" "<<endl;
 	    
+        //relax one more time if this time any chnages happen then neg cycle present
 	    for(auto edge : edges){
            if(dist[edge[0]]+edge[2]<dist[edge[1]]){
                return true;

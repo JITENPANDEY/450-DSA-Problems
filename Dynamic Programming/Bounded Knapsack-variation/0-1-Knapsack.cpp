@@ -5,7 +5,7 @@ int solve(int wt[], int val[], int Cap, int n){
   if(Cap==0 || n==0)
     return 0;
   if(dp[n][Cap]!=-1)
-  return dp[n][Cap];
+    return dp[n][Cap];
   if(wt[n]<=Cap){
     return dp[n][Cap] = max(val[n] + solve(wt, val, Cap-wt[n], n-1) , solve(wt, val, Cap, n-1));
   }else{

@@ -2,7 +2,7 @@ int findCheapestPrice(int n, vector<vector<int>>& flights, int src, int dst, int
         // dp[k][v] = dist to reach v using k stops
         vector<vector<int>> dp(k+2, vector<int>(n, INT_MAX));
         
-        // for src dp[k][src] = always
+        // for src dp[k][src] = 0 always
         for(int i=0;i<=k+1;i++){
             dp[i][src] = 0;
         }

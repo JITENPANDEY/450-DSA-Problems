@@ -1,8 +1,8 @@
 int findgap(int gap)
 {
     if(gap<=1)
-    return 0;
-    return (gap / 2) + (gap % 2);;
+        return 0;
+    return (gap / 2) + (gap % 2);
 }
 void merge(int ar1[], int ar2[], int m, int n) {
     int gap=n+m;

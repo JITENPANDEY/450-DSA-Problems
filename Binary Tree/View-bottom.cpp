@@ -7,7 +7,7 @@ while(!q.empty()){
     Node* it = q.front().second;
     q.pop();
     
-        mp[x] = it->data;
+    mp[x] = it->data;
     
     if(it->left){
         q.push({x-1,it->left});

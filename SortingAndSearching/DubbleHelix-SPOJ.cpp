@@ -6,7 +6,7 @@ ll maxSum(vector<ll>&arr1, vector<ll>&arr2){
   ll i=0, j=0;
   ll maxsum =0;
   ll sum1=0, sum2=0;
-  while(i<arr1.size() && arr2.size()){
+  while(i<arr1.size() && j<arr2.size()){
       if(arr1[i]>arr2[j]){
           sum2+=arr2[j];
           j++;

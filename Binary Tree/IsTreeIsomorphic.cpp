@@ -1,7 +1,7 @@
 bool isIsomorphic(Node *root1,Node *root2)
 {
 //add code here.
-if(root1==nullptr and root2==nullptr) 
+    if(root1==nullptr and root2==nullptr) 
         return true;
     if(root1==nullptr or root2==nullptr) 
         return false;

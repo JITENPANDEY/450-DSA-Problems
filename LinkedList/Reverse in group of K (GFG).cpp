@@ -17,7 +17,7 @@ int length(struct node *head){
     
         int len = length(head);
         node *curr = head;
-        while(len>0){
+        while(len>0){  // see the changes in while loop
             //reverse in grp of size k
             for(int i=0;i<min(len, k);i++){
                 node* next = curr->next;

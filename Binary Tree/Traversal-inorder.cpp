@@ -23,7 +23,6 @@ void withoutRecur(TreeNode* root, vector<int>&ans){
             ans.push_back(curr->val);
             cout<<curr->val<<endl;
             curr=curr->right;
-            
         }
     }
 }
